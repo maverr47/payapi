@@ -1,0 +1,117 @@
+.hero {
+  display: flex;
+  align-items: center;
+  gap: 206px;
+
+  margin-top: 75px;
+  &__title {
+    max-width: 546px;
+    font-family: $title-font;
+    font-size: $main-title-size;
+    line-height: 72px;
+    color: $main-color;
+    font-weight: 400;
+  }
+  &__form {
+    max-width: 445px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-top: 21px;
+
+    background: #fbfcfe;
+    box-shadow: 10px 10px 25px -10px rgba(54, 83, 107, 0.25);
+    border-radius: 24px;
+  }
+  &__input {
+    border: none;
+    padding: 16px 27px;
+    border-radius: 24px;
+
+    font-weight: 700;
+
+    color: #36536b;
+
+    mix-blend-mode: normal;
+    opacity: 0.5;
+  }
+  &__btn {
+    padding: 16px 24.5px 14px 26px;
+    color: #fbfcfe;
+    letter-spacing: -0.115385px;
+
+    font-weight: 700;
+    background-color: $button-color;
+    box-shadow: 10px 10px 25px -10px rgba(54, 83, 107, 0.25);
+    border-radius: 24px;
+    border: none;
+    &:hover {
+      background-color: $button-hover-color;
+    }
+    &:active {
+      background-color: $main-color;
+    }
+  }
+  p {
+    margin-top: 16px;
+    margin-left: 30px;
+    color: #6c8294;
+  }
+}
+
+@media only screen and (max-width: 1120px) {
+  .hero {
+    gap: 0;
+    justify-content: space-between;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .hero {
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    text-align: center;
+    &__title {
+      max-width: 573px;
+      font-size: 48px;
+      line-height: 56px;
+      letter-spacing: -0.369231px;
+    }
+    &__form {
+      margin: 0 auto;
+      margin-top: 22px;
+      margin-bottom: 16px;
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .hero {
+    &__title {
+      height: auto;
+      text-align: center;
+      font-size: 32px;
+      line-height: 36px;
+      letter-spacing: -0.246154px;
+    }
+    &__form {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 16px;
+      background: none;
+      box-shadow: none;
+    }
+    &__input,
+    &__btn {
+      width: 80vw;
+    }
+    &__image {
+      max-width: 150px;
+      max-height: 250px;
+    }
+  }
+}

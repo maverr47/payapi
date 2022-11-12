@@ -1,0 +1,131 @@
+.about {
+  margin-top: 75px;
+  background-color: #1b262f;
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+  &__title {
+    max-width: 445px;
+    font-family: $title-font;
+    font-size: 48px;
+    line-height: 56px;
+    font-weight: 400;
+    letter-spacing: -0.369231px;
+
+    color: #fbfcfe;
+  }
+
+  &__subtitle {
+    max-width: 445px;
+    font-size: 15px;
+    line-height: 28px;
+    margin-top: 24px;
+
+    color: #fbfcfe;
+
+    mix-blend-mode: normal;
+    opacity: 0.7;
+  }
+  &__btn {
+    padding: 16px 24.5px 14px 26px;
+    margin-top: 32px;
+    color: #fbfcfe;
+    letter-spacing: -0.115385px;
+
+    font-weight: 700;
+    background-color: transparent;
+    box-shadow: 10px 10px 25px -10px rgba(54, 83, 107, 0.25);
+    border-radius: 24px;
+    border: 1px solid #fff;
+    &:hover {
+      background-color: #fbfcfe;
+      color: $main-color;
+    }
+    &:active {
+      background-color: $button-color;
+      color: #fbfcfe;
+      border: none;
+    }
+  }
+  &__companies {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    align-items: center;
+    text-align: center;
+    column-gap: 60px;
+    row-gap: 45px;
+  }
+}
+
+@media only screen and (max-width: 1160px) {
+  .about {
+    &__companies {
+      column-gap: 20px;
+    }
+  }
+}
+
+@media only screen and (max-width: 1060px) {
+  .about {
+    &__inner {
+      flex-direction: column-reverse;
+      gap: 65px;
+      text-align: center;
+    }
+    &__companies {
+      column-gap: 60px;
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .about {
+    &__title {
+      font-size: 36px;
+      line-height: 36px;
+      text-align: center;
+      letter-spacing: -0.276923px;
+    }
+    &__companies {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+    }
+    &__icon:nth-child(1) {
+      width: 107px;
+      height: 15px;
+    }
+    &__icon:nth-child(2) {
+      width: 120px;
+      height: 26px;
+    }
+    &__icon:nth-child(3) {
+      width: 115px;
+      height: 22px;
+    }
+    &__icon:nth-child(4) {
+      width: 107px;
+      height: 14px;
+    }
+    &__icon:nth-child(5) {
+      width: 79px;
+      height: 27px;
+    }
+    &__icon:nth-child(6) {
+      width: 113px;
+      height: 22px;
+    }
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .about {
+    &__companies {
+      column-gap: 20px;
+    }
+  }
+}
